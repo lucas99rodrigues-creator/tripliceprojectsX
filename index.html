@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Six - Soluções Tecnológicas</title>
+
+    <!-- Meta Tags de SEO e Redes Sociais (Open Graph) -->
+    <meta name="description" content="Soluções tecnológicas integradas em infraestrutura de redes, CFTV IP com IA, automação industrial SCADA, cabeamento estruturado e energia solar em todo o Brasil.">
+    <meta property="og:title" content="Mi Six - Soluções Tecnológicas">
+    <meta property="og:description" content="Infraestrutura tecnológica inteligente, segura e de alto desempenho para o seu negócio.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Dados Estruturados Schema.org (LocalBusiness) para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mi Six - Soluções Tecnológicas",
+      "image": "logo.png",
+      "description": "Soluções tecnológicas integradas em infraestrutura de redes, CFTV IP com IA, automação industrial SCADA, cabeamento estruturado e energia solar.",
+      "telephone": "+55-41-99850-1417",
+      "email": "comercial@misix.com.br",
+      "areaServed": "Brazil",
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Biblioteca Lucide Icons (carregada sem bloquear a renderização) -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body>
+
+    <!-- Botão Flutuante de WhatsApp com Rastreamento -->
+    <a href="https://wa.me/5541998501417" class="float-whatsapp" id="whatsappFloatBtn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+        <i data-lucide="message-circle" style="width: 30px; height: 30px; stroke: #fff;"></i>
+    </a>
+
+    <header>
+        <a href="#" class="logo-container" aria-label="Mi Six - Página Inicial">
+            <img src="logo.png" alt="Mi Six Logo" class="logo-img" loading="eager">
+        </a>
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#clientes">Nossos Clientes</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <!-- Carrossel gerenciado dinamicamente via JS (Suporte a WebP recomendado) -->
+            <div class="hero-carousel" id="heroCarousel" aria-hidden="true"></div>
+
+            <div class="hero-content">
+                <h1>Sua Infraestrutura Tecnológica com Inteligência e Segurança</h1>
+                <p>Soluções tecnológicas integradas para transformar a infraestrutura do seu negócio com segurança, engenharia e alto desempenho em todo o Brasil.</p>
+                <a href="https://wa.me/5541998501417" class="btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Diagnóstico Gratuito</a>
+            </div>
+        </section>
+
+        <!-- Seção de Prova Social -->
+        <section id="prova-social" class="proof-section">
+            <h2 class="section-title">Confiança e Parceria</h2>
+            <div class="proof-grid">
+                <article class="proof-card">
+                    <p>"Excelente profissionalismo. A Mi Six entregou nossa automação com total conformidade e rapidez."</p>
+                    <span><strong>Gestor de Operações</strong></span>
+                </article>
+                <article class="proof-card">
+                    <p>"A solução de CFTV com IA mudou o nível de segurança da nossa planta. Recomendamos fortemente."</p>
+                    <span><strong>Gerente de TI</strong></span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Quem Somos -->
+        <section id="quem-somos">
+            <h2 class="section-title">Quem Somos</h2>
+            <div class="about-content">
+                <p><strong>Temos o know-how que você procura.</strong> A Mi Six é uma empresa nacional especializada em soluções tecnológicas integradas, com foco em infraestrutura de redes, automação e elétrica. Atuamos com excelência na entrega de projetos completos e certificados em Cabeamento Estruturado VDI (Voz, Dados e Imagens), fusão de fibra óptica, automação industrial com Elipse, automação residencial inteligente e instalações elétricas de baixa e média tensão.</p>
+            </div>
+        </section>
+
+        <!-- Seção Soluções -->
+        <section id="solucoes">
+            <h2 class="section-title">Nossas Soluções</h2>
+            <div class="grid-solutions">
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="network"></i></div>
+                        <h3>Cabeamento Estruturado</h3>
+                        <p>Certificação de cabeamento estruturado, incluindo cabos metálicos e fibra óptica, seguindo rigorosamente normas técnicas como TIA/EIA-568, ISO/IEC 11801 e ABNT NBR 14565.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Cabeamento%20Estruturado." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="cctv"></i></div>
+                        <h3>CFTV IP com Inteligência Artificial</h3>
+                        <p>Monitoramento inteligente com reconhecimento facial, leitura de placas e alertas automáticos, oferecendo mais segurança, precisão e eficiência na gestão de ambientes.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20CFTV%20IP%20com%20IA." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="home"></i></div>
+                        <h3>Automação Residencial</h3>
+                        <p>Integração e controle de sistemas da casa, como luz, segurança e climatização, para maior conforto e economia, gerenciados remotamente via smartphone.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Automa%C3%A7%C3%A3o%20Residencial." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="cpu"></i></div>
+                        <h3>SCADA (Elipse)</h3>
+                        <p>Plataforma de supervisão e controle em tempo real para monitorar processos industriais, gerenciar alarmes e integrar múltiplos protocolos, com escalabilidade para plantas de todos os portes.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20SCADA%20(Elipse)." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="file-text"></i></div>
+                        <h3>Laudos Técnicos</h3>
+                        <p>Avaliações de segurança e conformidade para instalações elétricas e de telecomunicações que identificam falhas e garantem o atendimento às normas.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Laudos%20T%C3%A9cnicos." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="settings"></i></div>
+                        <h3>Projetos de Engenharia</h3>
+                        <p>Planejamento e execução de sistemas elétricos, redes de comunicação e controle automatizado para garantir eficiência energética e operação inteligente.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Projetos%20de%20Engenharia." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="sun"></i></div>
+                        <h3>Usina de Energia Solar</h3>
+                        <p>Investimento para comercialização de energia e redução da conta de luz, gerando lucro com o excedente, protection contra aumentos futuros e sustentabilidade.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Usina%20de%20Energia%20Solar." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+
+                <article class="card">
+                    <div>
+                        <div class="card-icon"><i data-lucide="server"></i></div>
+                        <h3>Redes e Servidores</h3>
+                        <p>Soluções completas para indústrias, comércios e residências, incluindo configuração de ativos como switches, servidores, câmeras e storages com alto desempenho.</p>
+                    </div>
+                    <a href="https://wa.me/5541998501417?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Redes%20e%20Servidores." class="card-btn whatsapp-track-btn" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Nossos Clientes -->
+        <section id="clientes" class="clients-section">
+            <h2 class="section-title">Nossos Clientes</h2>
+            <div class="clients-grid">
+                <div class="client-card">Parceiro / Cliente 01</div>
+                <div class="client-card">Parceiro / Cliente 02</div>
+                <div class="client-card">Parceiro / Cliente 03</div>
+                <div class="client-card">Parceiro / Cliente 04</div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="contact-section">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info-box">
+                    <a href="https://wa.me/5541998501417" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp-track-btn">
+                        <div class="contact-icon-box"><i data-lucide="message-square"></i></div>
+                        <div>
+                            <span class="contact-label">WhatsApp</span>
+                            <span class="contact-value">(41) 99850-1417</span>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:comercial@misix.com.br" class="contact-item">
+                        <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+                        <div>
+                            <span class="contact-label">E-mail</span>
+                            <span class="contact-value">comercial@misix.com.br</span>
+                        </div>
+                    </a>
+
+                    <p class="contact-note">
+                        Entregamos projetos seguros, inteligentes e alinhados às melhores práticas do mercado, personalizados para cada parceiro em todo o Brasil.
+                    </p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <label for="name" class="sr-only">Seu Nome</label>
+                    <input type="text" id="name" placeholder="Seu Nome" required>
+
+                    <label for="email" class="sr-only">Seu E-mail</label>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+
+                    <label for="phone" class="sr-only">Seu Telefone</label>
+                    <input type="tel" id="phone" placeholder="Seu Telefone" required>
+
+                    <label for="message" class="sr-only">Como podemos ajudar no seu projeto?</label>
+                    <textarea id="message" rows="4" placeholder="Como podemos ajudar no seu projeto?" required></textarea>
+
+                    <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi Six - Soluções Tecnológicas. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script de Comportamento, Otimizações e Rastreamento -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Inicializar ícones do Lucide
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            // 2. Carrossel Hero (Dica: utilize imagens .webp na pasta imagens/)
+            const imagensDaPasta = [
+		 "hero-4.webp",
+
+            ];
+
+            const carouselContainer = document.getElementById('heroCarousel');
+            let timer = null;
+
+            if (carouselContainer && imagensDaPasta.length > 0) {
+                imagensDaPasta.forEach((imgNome, index) => {
+                    const slide = document.createElement('div');
+                    slide.classList.add('hero-slide');
+                    slide.style.backgroundImage = `url('imagens/${imgNome}')`;
+                    
+                    if (index === 0) {
+                        slide.classList.add('active');
+                    }
+                    carouselContainer.appendChild(slide);
+                });
+
+                const slides = carouselContainer.querySelectorAll('.hero-slide');
+                let currentSlide = 0;
+
+                function nextSlide() {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+
+                function startCarousel() {
+                    if (slides.length > 1 && !timer) {
+                        timer = setInterval(nextSlide, 5000);
+                    }
+                }
+
+                function stopCarousel() {
+                    clearInterval(timer);
+                    timer = null;
+                }
+
+                startCarousel();
+
+                const heroSection = document.querySelector('.hero');
+                if (heroSection) {
+                    heroSection.addEventListener('mouseenter', stopCarousel);
+                    heroSection.addEventListener('mouseleave', startCarousel);
+                }
+            }
+
+            // 3. Rastreamento de Conversões (Google Analytics GA4 / Meta Pixel Hook)
+            const trackConversion = (conversionType, details) => {
+                // Integração padrão GA4 (gtag) se disponível
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'GA_MEASUREMENT_ID/conversion_event',
+                        'event_category': 'Engagement',
+                        'event_label': conversionType,
+                        'value': 1
+                    });
+                }
+                // Hook para debug / console
+                console.log(`Conversão Registrada [${conversionType}]:`, details);
+            };
+
+            // Rastrear cliques no WhatsApp
+            document.querySelectorAll('.whatsapp-track-btn, .float-whatsapp').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    trackConversion('WhatsApp_Click', btn.getAttribute('href'));
+                });
+            });
+
+            // 4. Envio automatizado do formulário direto para o WhatsApp com Rastreamento
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    trackConversion('Form_Submit', { name, email, phone });
+
+                    const whatsappNumber = "5541998501417";
+                    const text = `Olá! Gostaria de um orçamento.\n\n*Nome:* ${name}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n*Mensagem:* ${message}`;
+                    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                });
+            }
+
+            // 5. Menu Mobile Responsivo
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (mobileMenu && navMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    mobileMenu.classList.toggle('open');
+                });
+
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        mobileMenu.classList.remove('open');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
