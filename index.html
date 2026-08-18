@@ -7,12 +7,28 @@
 
     <!-- Meta Tags de SEO e Redes Sociais (Open Graph) -->
     <meta name="description" content="Soluções tecnológicas integradas em infraestrutura de redes, CFTV IP com IA, automação industrial SCADA, cabeamento estruturado e energia solar em todo o Brasil.">
+    <meta name="theme-color" content="#0066cc">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://misix.com.br/">
     <meta property="og:title" content="Mi Six - Soluções Tecnológicas">
     <meta property="og:description" content="Infraestrutura tecnológica inteligente, segura e de alto desempenho para o seu negócio.">
     <meta property="og:image" content="logo.png">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mi Six - Soluções Tecnológicas">
+    <meta name="twitter:description" content="Infraestrutura tecnológica inteligente, segura e de alto desempenho para o seu negócio.">
+    <meta name="twitter:image" content="logo.png">
+
+    <!-- Preconnect para recursos externos (performance) -->
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://wa.me">
+
+    <!-- Preload da imagem do hero para LCP mais rápido -->
+    <link rel="preload" as="image" href="/imagens/hero-4.webp">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
 
     <!-- Dados Estruturados Schema.org (LocalBusiness) para SEO -->
     <script type="application/ld+json">
@@ -34,6 +50,9 @@
 </head>
 <body>
 
+    <!-- Link de Acessibilidade para Pular para o Conteúdo Principal -->
+    <a href="#quem-somos" class="skip-link">Pular para o conteúdo principal</a>
+
     <!-- Botão Flutuante de WhatsApp com Rastreamento -->
     <a href="https://wa.me/5541998501417" class="float-whatsapp" id="whatsappFloatBtn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
         <i data-lucide="message-circle" style="width: 30px; height: 30px; stroke: #fff;"></i>
@@ -41,14 +60,14 @@
 
     <header>
         <a href="#" class="logo-container" aria-label="Mi Six - Página Inicial">
-            <img src="logo.png" alt="Mi Six Logo" class="logo-img" loading="eager">
+            <img src="logo.png" alt="Mi Six Logo" class="logo-img" loading="eager" width="120" height="40">
         </a>
-        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" role="button" tabindex="0">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" role="button" tabindex="0" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <nav class="nav-menu">
+        <nav class="nav-menu" aria-label="Navegação principal">
             <a href="#quem-somos">Quem Somos</a>
             <a href="#solucoes">Soluções</a>
             <a href="#clientes">Nossos Clientes</a>
@@ -207,18 +226,18 @@
                     </p>
                 </div>
                 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" novalidate>
                     <label for="name" class="sr-only">Seu Nome</label>
-                    <input type="text" id="name" placeholder="Seu Nome" required>
+                    <input type="text" id="name" name="name" placeholder="Seu Nome" required autocomplete="name">
 
                     <label for="email" class="sr-only">Seu E-mail</label>
-                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required autocomplete="email">
 
                     <label for="phone" class="sr-only">Seu Telefone</label>
-                    <input type="tel" id="phone" placeholder="Seu Telefone" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Seu Telefone" required autocomplete="tel">
 
                     <label for="message" class="sr-only">Como podemos ajudar no seu projeto?</label>
-                    <textarea id="message" rows="4" placeholder="Como podemos ajudar no seu projeto?" required></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Como podemos ajudar no seu projeto?" required></textarea>
 
                     <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
                 </form>
@@ -231,124 +250,6 @@
     </footer>
 
     <!-- Script de Comportamento, Otimizações e Rastreamento -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Inicializar ícones do Lucide
-            if (window.lucide) {
-                lucide.createIcons();
-            }
-
-            // 2. Carrossel Hero (Dica: utilize imagens .webp na pasta imagens/)
-            const imagensDaPasta = [
-		 "hero-4.webp",
-
-            ];
-
-            const carouselContainer = document.getElementById('heroCarousel');
-            let timer = null;
-
-            if (carouselContainer && imagensDaPasta.length > 0) {
-                imagensDaPasta.forEach((imgNome, index) => {
-                    const slide = document.createElement('div');
-                    slide.classList.add('hero-slide');
-                    slide.style.backgroundImage = `url('imagens/${imgNome}')`;
-                    
-                    if (index === 0) {
-                        slide.classList.add('active');
-                    }
-                    carouselContainer.appendChild(slide);
-                });
-
-                const slides = carouselContainer.querySelectorAll('.hero-slide');
-                let currentSlide = 0;
-
-                function nextSlide() {
-                    slides[currentSlide].classList.remove('active');
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    slides[currentSlide].classList.add('active');
-                }
-
-                function startCarousel() {
-                    if (slides.length > 1 && !timer) {
-                        timer = setInterval(nextSlide, 5000);
-                    }
-                }
-
-                function stopCarousel() {
-                    clearInterval(timer);
-                    timer = null;
-                }
-
-                startCarousel();
-
-                const heroSection = document.querySelector('.hero');
-                if (heroSection) {
-                    heroSection.addEventListener('mouseenter', stopCarousel);
-                    heroSection.addEventListener('mouseleave', startCarousel);
-                }
-            }
-
-            // 3. Rastreamento de Conversões (Google Analytics GA4 / Meta Pixel Hook)
-            const trackConversion = (conversionType, details) => {
-                // Integração padrão GA4 (gtag) se disponível
-                if (typeof gtag === 'function') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'GA_MEASUREMENT_ID/conversion_event',
-                        'event_category': 'Engagement',
-                        'event_label': conversionType,
-                        'value': 1
-                    });
-                }
-                // Hook para debug / console
-                console.log(`Conversão Registrada [${conversionType}]:`, details);
-            };
-
-            // Rastrear cliques no WhatsApp
-            document.querySelectorAll('.whatsapp-track-btn, .float-whatsapp').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    trackConversion('WhatsApp_Click', btn.getAttribute('href'));
-                });
-            });
-
-            // 4. Envio automatizado do formulário direto para o WhatsApp com Rastreamento
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    const name = document.getElementById('name').value.trim();
-                    const email = document.getElementById('email').value.trim();
-                    const phone = document.getElementById('phone').value.trim();
-                    const message = document.getElementById('message').value.trim();
-
-                    trackConversion('Form_Submit', { name, email, phone });
-
-                    const whatsappNumber = "5541998501417";
-                    const text = `Olá! Gostaria de um orçamento.\n\n*Nome:* ${name}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n*Mensagem:* ${message}`;
-                    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-                    window.open(url, '_blank', 'noopener,noreferrer');
-                });
-            }
-
-            // 5. Menu Mobile Responsivo
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navMenu = document.querySelector('.nav-menu');
-
-            if (mobileMenu && navMenu) {
-                mobileMenu.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    mobileMenu.classList.toggle('open');
-                });
-
-                document.querySelectorAll('.nav-menu a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navMenu.classList.remove('active');
-                        mobileMenu.classList.remove('open');
-                    });
-                });
-            }
-        });
-    </script>
+    <script type="module" src="/src/script.js"></script>
 </body>
 </html>

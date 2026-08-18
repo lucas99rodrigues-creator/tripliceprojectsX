@@ -1,4 +1,7 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "framework": "vite"
 }
